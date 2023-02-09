@@ -1,0 +1,101 @@
+.what {
+    position: relative;
+    z-index: 1;
+    padding-top: 41px;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        height: 500px;
+        width: calc(100% + 100px);
+        background: #fff;
+        transform: rotate(-6deg);
+
+        @media screen and (max-width: 767px) {
+            top: -60px;
+            height: 200px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 22px;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__subtitle {
+        max-width: 800px;
+        font-size: 22px;
+        line-height: 120%;
+        text-align: center;
+        margin: 0 auto 88px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__slider {
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    &__slide {
+        &-img {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 46px;
+
+            @media screen and (max-width: 767px) {
+                max-width: 160px;
+                margin: 0 auto 24px;
+            }
+
+            img {
+                display: block;
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 120%;
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .slider-arrow {
+        position: absolute;
+        top: 62%;
+        z-index: 2;
+        
+        @media screen and (max-width: 767px) {
+            display: flex;
+        }
+
+        &-prev {
+            left: 20px;
+            transform: rotate(180deg);
+        }
+
+        &-next {
+            right: 20px;
+        }
+    }
+}

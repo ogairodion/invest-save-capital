@@ -1,0 +1,33 @@
+-
+    const what_items = [
+        {
+            img: '1',
+            text: 'Какие существуют альтернативы американскому доллару? Сможет ли юань заменить его?',
+        },
+        {
+            img: '2',
+            text: 'Как найти оптимальное инвестиционное решение для своего капитала?',
+        },
+        {
+            img: '3',
+            text: 'Где безопаснее хранить деньги в России: на депозите или в ценных бумагах?',
+        },
+    ]
+
+section.what
+    .l-default 
+        h2.what__title.title.title--h2 ЧТО ВЫ УЗНАЕТЕ на вебинаре?
+        .what__subtitle Грамотные решения помогут сохранить деньги в любое время, даже если ситуация кажется совсем запутанной
+        .what-slider__wrapper
+            .slider-arrows 
+                .slider-arrow.slider-arrow-prev
+                    img(src="img/svg/arrow.svg", alt="")  
+                .slider-arrow.slider-arrow-next
+                    img(src="img/svg/arrow.svg", alt="")  
+            .what__slider.swiper-container
+                .swiper-wrapper
+                    each what_item in what_items 
+                        .what__slide.swiper-slide   
+                            .what__slide-img
+                                img(src="img/svg/what/" + what_item.img + '.svg' , alt="")
+                            .what__slide-text= what_item.text

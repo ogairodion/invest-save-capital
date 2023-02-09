@@ -1,0 +1,27 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z('header');
+    width: 100%;
+    padding-top: 43px;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 51px;
+    }
+
+    &__logo {
+        height: 52px;
+
+        @media screen and (max-width: 767px) {
+            width: 183px;
+            height: auto;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            min-height: 100%;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.horizontal-form {
+    position: relative;
+    min-height: 700px;
+    padding: 88px 0 52px;
+
+    @media screen and (max-width: 991px) {
+        min-height: 0;
+        padding: 40px 0 25px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: -240px;
+
+        @media screen and (max-width: 1049px) {
+            position: static;
+            right: 0;
+        }
+    }
+
+    .form {
+        max-width: 680px;
+
+        @media screen and (max-width: 991px) {
+            max-width: 100%;
+            margin-bottom: 26px;
+        }
+    
+        &__title {
+            margin-bottom: 22px;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 11px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 22px;
+            line-height: 120%;
+            margin-bottom: 58px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+        }
+
+        &__inputs {
+            max-width: 555px;
+            margin-bottom: 44px;
+            
+            @media screen and (max-width: 991px) {
+                margin-bottom: 41px;
+            }
+        }
+
+        &__input {
+            margin-bottom: 44px;
+            
+            @media screen and (max-width: 1049px) {
+                margin-bottom: 27px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        input {
+            width: 100%;
+            background: none;
+            border-bottom: 1px solid $blue;
+            padding-bottom: 7px;
+
+            &::placeholder {
+                color: $primary_text;
+            }
+        }
+
+        &__checkbox {
+            max-width: 555px;
+            font-size: 13px;
+            line-height: 120%;  
+            margin-bottom: 44px;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .btn {
+            @media screen and (max-width: 767px) {
+                min-height: 0;
+                font-size: 17px;
+                padding: 8px 48px; 
+            }
+        }
+    }
+}
